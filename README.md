@@ -16,8 +16,8 @@ Deployed a simple node js website using AWS Services
 - After build create a pipeline through CodePipeline for the deployment.
 
 ## Setup a github repo
-- It is simple step you just need a github account to create a ndoejs repo or can fork it.
-- If you want to do this step in AWS then AWS code commit is service which lets you commit the code onto the AWS but first connect AWS to local editor then add,commit and push
+- It is simple step you just need a github account and a Node.js repo or can fork it.
+- If you want to do this step in AWS then AWS CodeCommit is service which lets you commit the code onto the AWS but first connect AWS to local editor then add,commit and push
 - Your repo is ready for the build step
 
 ## Creating an application and setting up the Node.js environment
@@ -32,7 +32,7 @@ Deployed a simple node js website using AWS Services
 
 ## Build project using AWS codeBuild
 - Create build project and give all the details while in the source you need to give the source provider as github.
-- Then it will give an option to connect to your personal repo after all the credentials.
+- Then it will give an option to connect to your personal repo you provide credentials.
 - Select the repo you want to use in the project and your repo is connected to AWS.
 - Give a new service role it will automatically creates a new service role in IAM
 - Then you have to insert some build command or you can just create buildspec.yml file in your editor and your project is created.
