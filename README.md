@@ -15,6 +15,11 @@ Deployed a simple node js website using AWS Services
 - Once the environment is created then with AWS codebuild create the build project
 - After build create a pipeline through code pipeline for the deployement.
 
+## Setup a github repo
+- It is simple step you just need a github account to create a ndoejs repo or can fork it.
+- If you want to do this step in AWS then AWS code commit is service which lets you commit the code onto the AWS but first connect AWS to local editor then add,commit and push
+- Your repo is ready for the build step
+
 ## Creating an application and setting up the nodejs environment
 - In Beanstalk create an application. You just have to give a name to your app.
 
@@ -34,6 +39,22 @@ Deployed a simple node js website using AWS Services
 - You can start you build and can view the build phases
 
 ![Build phases](https://github.com/Faizan64/CI-CD-deployment-using-AWS-services/assets/91891601/47df1f87-134a-409a-b3d2-3e622978f34e)
+
+## Deploy the application
+- Create a pipeline using code pipeline
+- You need a give a name and select the new service role it will create a new role for you
+- Next give source as github and it will ask to connect then connect your AWS to github and select your repo.
+- You need to select github webhooks because it will ensure that whenever you edit your code in the repo the pipeline will automatically build and deploy your code
+- Take build provider as code build and deploy provider as beanstalk and provide application details and your good to go your pipeline is created
+- You can also deploy your application with code deploy instead of beanstalk. I choose beanstalk because it is much reliable
+
+![pipeline flow](https://github.com/Faizan64/CI-CD-deployment-using-AWS-services/assets/91891601/000ef8d6-5b90-4484-9b89-addbec725684)
+
+- Simple website is launched you can edit the code and deploy a flashy website as well
+
+![Website](https://github.com/Faizan64/CI-CD-deployment-using-AWS-services/assets/91891601/14910d6c-0c87-46b4-a91c-b28780a3222e)
+
+
 
 
 
